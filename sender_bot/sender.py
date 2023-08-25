@@ -7,5 +7,5 @@ class Sender:
         self.api_token = api_token
         self.bot = telebot.TeleBot(api_token)
 
-    def send_message(self, uid: int) -> None:
-        self.bot.send_message(uid, "Hello")
+    def send_message(self, uid: int, message: str) -> None:
+        self.bot.send_message(uid, message)
