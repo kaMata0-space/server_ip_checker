@@ -11,8 +11,6 @@ def main() -> None:
     new_hostname = checker()
     if new_hostname:
         sender.send_message(uid=int(os.getenv('ADMIN_TELEGRAM_UID')), message=f'New hostname: {new_hostname}')
-    else:
-        sender.send_message(uid=int(os.getenv('ADMIN_TELEGRAM_UID')), message=f'Old hostname.')
 
 
 if __name__ == '__main__':
